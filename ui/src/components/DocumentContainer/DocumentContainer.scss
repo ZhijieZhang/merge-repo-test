@@ -1,0 +1,92 @@
+@import '../../constants/styles';
+
+
+
+.measurement-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  overflow: hidden;
+  user-select: none;
+
+  .footer-container {
+    pointer-events: none;
+    position: absolute;
+    // flex: 1;
+    width: 100%;
+    // https://stackoverflow.com/questions/12070759/make-absolute-positioned-div-expand-parent-div-height
+    height: calc(100% - 37px); // minus the height of the top header;
+
+    @include tablet-and-mobile {
+      height: calc(100% - 53px); // minus the height of the top header;
+    }
+
+    &.tools-header-open {
+      height: calc(100% - 76px); // minus the height of both headers;
+
+      @include tablet-and-mobile {
+        height: calc(100% - 104px); // minus the height of both headers;
+      }
+    }
+
+    .footer {
+      pointer-events: none;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      z-index: 55;
+      width: 100%;
+
+      * {
+        pointer-events: all;
+      }
+    }
+  }
+
+
+}
+
+.DocumentContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  width: 100%;
+  overflow: auto;
+  user-select: none;
+
+  .document {
+    margin: auto; // vertical centering when content is smaller than document container
+                  // can't use 'justify-content: center;' due to losing access to content when overflowing
+                  // see: https://stackoverflow.com/questions/33454533/cant-scroll-to-top-of-flex-item-that-is-overflowing-container
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+
+    .pageSection {
+      &[id*=pageSectionb] {
+        box-shadow: none;
+      }
+
+      .pageContainer {
+        background-color: $document-bg-color;
+        position: relative;
+        box-shadow: $md-shadow1;
+
+        span.link {
+          cursor: pointer;
+        }
+      }
+    }
+
+    textarea.freetext {
+      position: absolute;
+      z-index: 20;
+      border: 0;
+      padding: 0;
+      box-sizing: border-box;
+      resize: none;
+      outline: 1px solid transparent;
+    }
+  }
+}

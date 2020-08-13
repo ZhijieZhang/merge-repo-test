@@ -1,0 +1,30 @@
+@import '../../constants/styles';
+@import '../../constants/overlay';
+
+.ZoomItem {
+  @include button-reset;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding: 2px 6px;
+  padding-right: 19px;
+  cursor: pointer;
+  width: 100%;
+
+  &:hover {
+    background: var(--popup-button-hover);
+  }
+
+  .ZoomIcon {
+    margin: 4px;
+  }
+
+  .ZoomLabel {
+    margin: 0 4px;
+  }
+}
+
+// High specificity to override ".tool-button.Button"
+button.tool-button.ZoomToolButton {
+  width: auto;
+}

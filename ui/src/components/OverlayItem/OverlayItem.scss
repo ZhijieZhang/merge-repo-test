@@ -1,0 +1,12 @@
+@import '../../constants/styles';
+
+.OverlayItem {
+  @include button-reset;
+  margin: 2px 0px;
+  display: flex;
+  align-items: center;
+  height: 24px;
+  padding-left: 10px;
+  cursor: pointer;
+  width: 100%;
+}
