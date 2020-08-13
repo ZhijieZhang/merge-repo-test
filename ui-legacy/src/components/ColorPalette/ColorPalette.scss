@@ -1,0 +1,35 @@
+@import '../../constants/styles.scss';
+
+.ColorPalette {
+  margin-top: 6px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  .cell {
+    @extend %cell;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1px;
+    border: 1px solid transparent;
+    cursor: pointer;
+  
+    .check-mark {
+      width: 20px;
+      height: 20px;
+
+      &.dark {
+        color: rgba(0, 0, 0, 0.54);
+      }
+
+      &.bright {
+        color: rgba(255, 255, 255, 0.70);
+      }
+    }
+  }
+  
+  .dummy-cell {
+    @extend %cell;
+  }
+}

@@ -1,0 +1,70 @@
+@import '../../constants/styles';
+
+.Thumbnail {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: calc(100% - 5px);
+  margin: 2.5px 0px;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $gray10;
+  }
+
+  &.active {
+    background-color: lightgray;
+  }
+
+  .container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 13px 10px 5px 10px;
+
+    .page-image {
+      border: 1px solid $gray20;
+    }
+
+    .annotation-image, .page-image {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .page-label {
+    margin-top: 5px;
+  }
+
+  &.selected {
+    $selected-icon-size: 16px;
+    $selected-border-size: 3px;
+
+    .container {
+      .thumbnail::before {
+        content: "✓";
+        color: white;
+        background: $pdftron-blue;
+        width: $selected-icon-size;
+        height: $selected-icon-size;
+        border-bottom-right-radius: 5px;
+        position: absolute;
+        z-index: 10;
+      }
+    }
+
+    .page-label {
+      color: $pdftron-blue !important;
+    }
+
+    canvas:first-of-type {
+      border: solid $pdftron-blue $selected-border-size !important;
+    }
+  }
+}
