@@ -1,0 +1,65 @@
+.Outline {
+  color: var(--outline-color);
+  cursor: pointer;
+
+  &.visible {
+    display: flex;
+  }
+
+  &.hidden {
+    display: none;
+  }
+
+  flex-shrink: 0;
+  align-items: flex-start;
+
+  .padding {
+    flex-shrink: 0;
+    flex-basis: 19px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+    margin-left: 0px;
+    border-radius: 4px;
+    
+    .arrow {
+      transition: transform .1s ease;
+      
+      &.expanded {
+        transform: rotate(90deg);
+      }
+
+      &.collapsed {
+        transform: none;
+      }
+
+      .Icon {
+        width: 19px;
+        height: 19px;
+      }
+    }
+
+    &:hover {
+      background: var(--outline-hover);
+    }
+  }
+
+  .content {
+    flex-grow: 1;
+    margin-right: 5px;
+    
+    .title {
+      margin: 4px 0;
+      display: inline-flex;
+      cursor: pointer;
+      border-radius: 4px;
+      padding: 6px 6px;
+
+      &:hover {
+        background: var(--outline-hover);
+      }
+    }
+  }
+}
