@@ -48,8 +48,6 @@ const propTypes = {
   removeEventHandlers: PropTypes.func.isRequired,
 };
 
-console.log('test remote fetch');
-
 const App = ({ removeEventHandlers }) => {
   const store = useStore();
   const dispatch = useDispatch();
