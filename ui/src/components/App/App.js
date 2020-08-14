@@ -44,6 +44,7 @@ import actions from 'actions';
 
 import './App.scss';
 
+console.log('hmm');
 
 // TODO: Use constants
 const tabletBreakpoint = window.matchMedia('(min-width: 641px) and (max-width: 900px)');
