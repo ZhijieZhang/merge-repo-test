@@ -1,6 +1,5 @@
-import core from 'core';
+import actions from 'actions';
 
-export default results => {
-  core.clearSearchResults();
-  core.displayAdditionalSearchResults(results);
+export default store => results => {
+  store.dispatch(actions.setSearchResults(results));
 };

@@ -84,8 +84,7 @@
     "strikeout": "抹消線",
     "underline": "下線",
     "custom": "カスタム",
-    "rubberStamp": "ゴム印",
-    "note": "注意"
+    "rubberStamp": "ゴム印"
   },
   "rubberStamp": {
     "Approved": "承認済み",
@@ -129,8 +128,7 @@
     "redaction": "改訂",
     "viewControlsOverlay": "コントロールの表示",
     "calibration": "較正",
-    "createStampButton": "新しいスタンプを作成",
-    "filter": "フィルタ"
+    "createStampButton": "新しいスタンプを作成"
   },
   "message": {
     "toolsOverlayNoPresets": "プリセットなし",
@@ -141,7 +139,6 @@
     "enterPassword": "このドキュメントは、パスワード保護されています。 パスワードを入力してください。",
     "incorrectPassword": "パスワードが正しくありません。残りの試行回数：{{ remainingAttempts }}",
     "noAnnotations": "このドキュメントには注釈がありません。",
-    "noAnnotationsFilter": "注釈の作成を開始すると、フィルターがここに表示されます。",
     "noOutlines": "このドキュメントには概要がありません。",
     "noResults": "結果が見つかりませんでした。",
     "numResultsFound": "結果が見つかりました",
@@ -160,16 +157,12 @@
     "insertTextHere": "ここにテキストを挿入",
     "imageSignatureAcceptedFileTypes": "{{acceptedFileTypes}}のみが受け入れられます",
     "enterMeasurement": "2点間の測定値を入力します",
-    "linkURLorPage": "リンクURLまたはページ",
-    "sortBy": "並び替え"
+    "linkURLorPage": "リンクURLまたはページ"
   },
   "option": {
     "notesOrder": {
       "position": "ポジション",
-      "time": "時間",
-      "status": "状態",
-      "author": "著者",
-      "type": "タイプ"
+      "time": "時間"
     },
     "toolbarGroup": {
       "toolbarGroup-View": "見る",
@@ -233,10 +226,6 @@
       "dragAndDrop": "ここに画像をドラッグアンドドロップします",
       "or": "または",
       "pickImage": "署名画像を選択"
-    },
-    "filterAnnotModal": {
-      "commentBy": "によるコメント",
-      "types": "タイプ"
     },
     "status": {
       "status": "状態"

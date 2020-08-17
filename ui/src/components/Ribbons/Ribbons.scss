@@ -7,6 +7,10 @@
   justify-content: center;
   flex: 1;
 
+  @include tablet-and-mobile {
+    position: relative;
+  }
+
   .is-hidden {
     visibility: hidden;
   }
@@ -17,10 +21,6 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
-    &.centered-on-empty-space {
-      position: relative;
-    }
 
     .ribbons {
       display: flex;

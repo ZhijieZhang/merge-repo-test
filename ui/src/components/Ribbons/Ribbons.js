@@ -16,34 +16,22 @@ const Ribbons = ({ toolbarGroups, currentToolbarGroup, setToolbarGroup }) => {
   const [ribbonsWidth, setRibbonsWidth] = useState(0);
   const [containerWidth, setContainerWidth] = useState(0);
   const [hasEnoughSpace, setHasEnoughSpace] = useState(false);
-  const [hasEnoughCenteredSpace, setHasEnoughCenteredSpace] = useState(false);
   const ribbonsRef = useRef();
   const containerRef = useRef();
 
   useEffect(() => {
     if (ribbonsRef?.current && containerRef?.current) {
-      // const ribbonsRight = ribbonsRef.current.getBoundingClientRect().right;
-      const ribbonsWidth = ribbonsRef.current.getBoundingClientRect().width + 4;
+      const ribbonsRight = ribbonsRef.current.getBoundingClientRect().right;
       const containerLeft = containerRef.current.getBoundingClientRect().left;
-      const containerWidth = containerRef.current.getBoundingClientRect().width;
-      const ribbonsRight = ((window.innerWidth - ribbonsWidth) / 2) + ribbonsWidth;
       const remainingSpace = ribbonsRight - containerLeft;
-
       if (remainingSpace - ribbonsWidth > 0) {
         setHasEnoughSpace(true);
       } else {
         setHasEnoughSpace(false);
       }
-
-      if (ribbonsWidth < containerWidth) {
-        setHasEnoughCenteredSpace(true);
-      } else {
-        setHasEnoughCenteredSpace(false);
-      }
     }
   }, [ribbonsWidth, containerWidth, ribbonsRef, containerRef]);
-
-  if (toolbarGroups.length <= 1 || !tReady) {
+  if (toolbarGroups.length <= 1) {
     return null;
   }
 
@@ -58,10 +46,7 @@ const Ribbons = ({ toolbarGroups, currentToolbarGroup, setToolbarGroup }) => {
       {({ measureRef }) => (
         <DataElementWrapper
           dataElement="ribbons"
-          className={classNames({
-            "ribbons-container": true,
-            "centered-on-empty-space": !hasEnoughSpace,
-          })}
+          className="ribbons-container"
           ref={measureRef}
         >
           <Measure
@@ -76,7 +61,7 @@ const Ribbons = ({ toolbarGroups, currentToolbarGroup, setToolbarGroup }) => {
                 ref={measureRef}
                 className={classNames({
                   "ribbons": true,
-                  "is-hidden": !(hasEnoughSpace || hasEnoughCenteredSpace),
+                  "is-hidden": !hasEnoughSpace,
                 })}
               >
                 {toolbarGroups.map(key =>
@@ -91,7 +76,7 @@ const Ribbons = ({ toolbarGroups, currentToolbarGroup, setToolbarGroup }) => {
                       setToolbarGroup(key);
                     }}
                   >
-                    {t(`option.toolbarGroup.${key}`)}
+                    {tReady? t(`option.toolbarGroup.${key}`) : ''}
                   </button>)}
               </div>
             )}
@@ -99,7 +84,7 @@ const Ribbons = ({ toolbarGroups, currentToolbarGroup, setToolbarGroup }) => {
           <div
             className={classNames({
               "ribbons": true,
-              "is-hidden": hasEnoughCenteredSpace,
+              "is-hidden": hasEnoughSpace,
             })}
           >
             <Dropdown

@@ -84,8 +84,7 @@
     "strikeout": "Tachado",
     "underline": "Subrayado",
     "custom": "Personalizado",
-    "rubberStamp": "Sello de goma",
-    "note": "Nota"
+    "rubberStamp": "Sello de goma"
   },
   "rubberStamp": {
     "Approved": "Aprobada",
@@ -129,8 +128,7 @@
     "redaction": "Modificación",
     "viewControlsOverlay": "Ver controles",
     "calibration": "Calibración",
-    "createStampButton": "Crear nuevo sello",
-    "filter": "Filtrar"
+    "createStampButton": "Crear nuevo sello"
   },
   "message": {
     "toolsOverlayNoPresets": "Sin preajustes",
@@ -141,7 +139,6 @@
     "enterPassword": "Este documento está protegido por contraseña. Introduce una contraseña",
     "incorrectPassword": "Contraseña incorrecta, intentos restantes: {{ remainingAttempts }}",
     "noAnnotations": "Este documento no tiene anotaciones.",
-    "noAnnotationsFilter": "Empiece a hacer anotaciones y los filtros aparecerán aquí.",
     "noOutlines": "Este documento no tiene esquema.",
     "noResults": "No se han encontrado resultados.",
     "numResultsFound": "resultados encontrados",
@@ -160,16 +157,12 @@
     "insertTextHere": "Inserta el texto aquí",
     "imageSignatureAcceptedFileTypes": "Solo se aceptan {{acceptFileTypes}}",
     "enterMeasurement": "Ingrese la medición entre los dos puntos",
-    "linkURLorPage": "URL de enlace o una página",
-    "sortBy": "Ordenar por"
+    "linkURLorPage": "URL de enlace o una página"
   },
   "option": {
     "notesOrder": {
       "position": "Posición",
-      "time": "Hora",
-      "status": "Estado",
-      "author": "Autor",
-      "type": "Tipo"
+      "time": "Hora"
     },
     "toolbarGroup": {
       "toolbarGroup-View": "Ver",
@@ -233,10 +226,6 @@
       "dragAndDrop": "Arrastra y suelta tu imagen aquí",
       "or": "O",
       "pickImage": "Elegir imagen de firma"
-    },
-    "filterAnnotModal": {
-      "commentBy": "Comentario de",
-      "types": "Tipos"
     },
     "status": {
       "status": "Estado"

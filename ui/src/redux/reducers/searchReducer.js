@@ -70,6 +70,18 @@ export default initialState => (state = initialState, action) => {
         isProgrammaticSearchFull: payload.isProgrammaticSearchFull,
       };
     }
+    case 'SET_ACTIVE_RESULT': {
+      return {
+        ...state,
+        activeResult: payload.activeResult,
+      };
+    }
+    case 'SET_ACTIVE_RESULT_INDEX': {
+      return {
+        ...state,
+        activeResultIndex: payload.index,
+      };
+    }
     case 'ADD_RESULT': {
       return {
         ...state,
@@ -92,6 +104,18 @@ export default initialState => (state = initialState, action) => {
       return {
         ...state,
         isWildcard: payload.isWildcard,
+      };
+    }
+    case 'SET_IS_SEARCHING': {
+      return {
+        ...state,
+        isSearching: payload.isSearching,
+      };
+    }
+    case 'SET_NO_RESULT': {
+      return {
+        ...state,
+        noResult: payload.noResult,
       };
     }
     case 'SET_SEARCH_ERROR': {

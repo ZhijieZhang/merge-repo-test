@@ -84,8 +84,7 @@
     "strikeout": "Strikeout",
     "underline": "Underline",
     "custom": "Custom",
-    "rubberStamp": "Rubber Stamp",
-    "note": "Note"
+    "rubberStamp": "Rubber Stamp"
   },
   "rubberStamp": {
     "Approved": "Approved",
@@ -129,8 +128,7 @@
     "redaction": "Redaction",
     "viewControlsOverlay": "View Controls",
     "calibration": "Calibration",
-    "createStampButton": "Create New Stamp",
-    "filter": "Filter"
+    "createStampButton": "Create New Stamp"
   },
   "message": {
     "toolsOverlayNoPresets": "No Presets",
@@ -141,7 +139,6 @@
     "enterPassword": "This document is password protected. Please enter a password",
     "incorrectPassword": "Incorrect password, attempts left: {{ remainingAttempts }}",
     "noAnnotations": "Start making annotations to leave a comment.",
-    "noAnnotationsFilter": "Start making annotations and filters will appear here.",
     "noOutlines": "This document has no outline.",
     "noResults": "No results found.",
     "numResultsFound": "results found",
@@ -160,16 +157,12 @@
     "insertTextHere": "Insert text here",
     "imageSignatureAcceptedFileTypes": "Only {{acceptedFileTypes}} are accepted",
     "enterMeasurement": "Enter measurement between the two points",
-    "linkURLorPage": "Link URL or a Page",
-    "sortBy": "Sort by"
+    "linkURLorPage": "Link URL or a Page"
   },
   "option": {
     "notesOrder": {
       "position": "Position",
-      "time": "Time",
-      "status": "Status",
-      "author": "Author",
-      "type": "Type"
+      "time": "Time"
     },
     "toolbarGroup": {
       "toolbarGroup-View": "View",
@@ -233,10 +226,6 @@
       "dragAndDrop": "Drag & Drop your image here",
       "or": "Or",
       "pickImage": "Choose a signature"
-    },
-    "filterAnnotModal": {
-      "commentBy": "Comment by",
-      "types": "Types"
     },
     "status": {
       "status": "Status"
