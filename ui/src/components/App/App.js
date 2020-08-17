@@ -51,7 +51,7 @@ const propTypes = {
   removeEventHandlers: PropTypes.func.isRequired,
 };
 
-console.log('he33re');
+console.log('he1re');
 
 const App = ({ removeEventHandlers }) => {
   const store = useStore();
