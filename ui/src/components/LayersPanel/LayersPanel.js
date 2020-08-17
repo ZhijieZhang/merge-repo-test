@@ -14,6 +14,7 @@ import './LayersPanel.scss';
 class LayersPanel extends React.PureComponent {
   static propTypes = {
     layers: PropTypes.arrayOf(PropTypes.object),
+    display: PropTypes.string.isRequired,
     isDisabled: PropTypes.bool,
     setLayers: PropTypes.func.isRequired,
   }
@@ -28,14 +29,14 @@ class LayersPanel extends React.PureComponent {
   }
 
   render() {
-    const { isDisabled, layers, setLayers } = this.props;
+    const { isDisabled, layers, display, setLayers } = this.props;
 
     if (isDisabled) {
       return null;
     }
 
     return (
-      <div className="Panel LayersPanel" data-element="layersPanel">
+      <div className="Panel LayersPanel" style={{ display }} data-element="layersPanel">
         {layers.map((layer, i) => (
           <Layer
             key={i}

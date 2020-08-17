@@ -84,8 +84,7 @@
     "strikeout": "Riscar",
     "underline": "Sublinhar",
     "custom": "Personalizado",
-    "rubberStamp": "Carimbo de borracha",
-    "note": "Nota"
+    "rubberStamp": "Carimbo de borracha"
   },
   "rubberStamp": {
     "Approved": "Aprovado",
@@ -129,8 +128,7 @@
     "redaction": "Supressão",
     "viewControlsOverlay": "Controles de visualização",
     "calibration": "Calibração",
-    "createStampButton": "Criar novo carimbo",
-    "filter": "Filtro"
+    "createStampButton": "Criar novo carimbo"
   },
   "message": {
     "toolsOverlayNoPresets": "Sem predefinições",
@@ -141,7 +139,6 @@
     "enterPassword": "Esse documento é protegido por senha. Digite uma senha",
     "incorrectPassword": "Senha incorreta, tentativas restantes: {{ remainingAttempts }}",
     "noAnnotations": "Esse documento não tem anotações.",
-    "noAnnotationsFilter": "Comece a fazer anotações e filtros aparecerão aqui.",
     "noOutlines": "Esse documento não tem esquema.",
     "noResults": "Nenhum resultado encontrado.",
     "numResultsFound": "resultados encontrados",
@@ -160,16 +157,12 @@
     "insertTextHere": "Insira texto aqui",
     "imageSignatureAcceptedFileTypes": "Somente {{acceptFileTypes}} são aceitos",
     "enterMeasurement": "Digite a medição entre os dois pontos",
-    "linkURLorPage": "URL do link ou uma página",
-    "sortBy": "Ordenar por"
+    "linkURLorPage": "URL do link ou uma página"
   },
   "option": {
     "notesOrder": {
       "position": "Posição",
-      "time": "Tempo",
-      "status": "Status",
-      "author": "Autor",
-      "type": "Tipo"
+      "time": "Tempo"
     },
     "toolbarGroup": {
       "toolbarGroup-View": "Visão",
@@ -233,10 +226,6 @@
       "dragAndDrop": "Arraste e solte sua imagem aqui",
       "or": "Ou",
       "pickImage": "Escolher imagem da assinatura"
-    },
-    "filterAnnotModal": {
-      "commentBy": "Comentado por",
-      "types": "Tipos"
     },
     "status": {
       "status": "Status"

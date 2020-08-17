@@ -195,6 +195,18 @@ const LinkModal = () => {
     }
   }, [tabSelected, isOpen, pageNumberInput, urlInput]);
 
+  const setDropdownNumbers = () => {
+    const numbers = [];
+    for (let i = 1; i <= totalPages; i++) {
+      numbers.push(
+        <option key={i} value={i}>
+          {i}
+        </option>
+      );
+    }
+    return numbers;
+  };
+
   const modalClass = classNames({
     Modal: true,
     LinkModal: true,
@@ -249,19 +261,18 @@ const LinkModal = () => {
               <form onSubmit={addPageLink}>
                 <div>{t('link.enterpage')}</div>
                 <div className="linkInput">
-                  <input
-                    type="number"
+                  <select
+                    className="pageNumberSelect"
                     ref={pageNumberInput}
                     value={pageNumber}
-                    onChange={e => setPageNumber(parseInt(e.target.value, 10))}
-                    min={1}
-                    max={totalPages}
-                  />
+                    onChange={e => setPageNumber(e.target.value)}
+                  >
+                    {setDropdownNumbers()}
+                  </select>
                   <Button
                     dataElement="linkSubmitButton"
                     label={t('action.link')}
                     onClick={addPageLink}
-                    disabled={pageNumber < 1 || pageNumber > totalPages}
                   />
                 </div>
               </form>

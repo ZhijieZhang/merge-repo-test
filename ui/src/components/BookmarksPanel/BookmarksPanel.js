@@ -23,6 +23,7 @@ class BookmarksPanel extends React.PureComponent {
   static propTypes = {
     bookmarks: PropTypes.object,
     addBookmark: PropTypes.func.isRequired,
+    display: PropTypes.string.isRequired,
     currentPage: PropTypes.number.isRequired,
     isDisabled: PropTypes.bool,
     t: PropTypes.func.isRequired,
@@ -32,6 +33,7 @@ class BookmarksPanel extends React.PureComponent {
   render() {
     const {
       isDisabled,
+      display,
       bookmarks,
       addBookmark,
       currentPage,
@@ -45,7 +47,7 @@ class BookmarksPanel extends React.PureComponent {
 
     const pageIndexes = Object.keys(bookmarks).map(pageIndex => parseInt(pageIndex, 10));
     return (
-      <div className="Panel BookmarksPanel" data-element="bookmarksPanel">
+      <div className="Panel BookmarksPanel" style={{ display }} data-element="bookmarksPanel">
         {
           this.state.isAdding ?
             <EditingBookmark

@@ -28,7 +28,6 @@ export default {
     },
     lastPickedToolForGroup: {},
     lastPickedToolGroup: {},
-    notesInLeftPanel: getHashParams('notesInLeftPanel', false),
     headers: {
       default: [
         { type: 'toggleElementButton', img: 'icon-header-sidebar-line', element: 'leftPanel', dataElement: 'leftPanelButton', title: 'component.leftPanel' },
@@ -466,7 +465,11 @@ export default {
     isRegex: false,
     isSearchUp: false,
     isAmbientString: false,
+    activeResult: null,
+    activeResultIndex: -1,
     results: [],
+    isSearching: false,
+    noResult: false,
     isProgrammaticSearch: false,
     isProgrammaticSearchFull: false,
   },

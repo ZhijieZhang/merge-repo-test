@@ -333,6 +333,10 @@ export const setSearchValue = value => ({
   type: 'SET_SEARCH_VALUE',
   payload: { value },
 });
+export const addResult = result => ({
+  type: 'ADD_RESULT',
+  payload: { result },
+});
 export const setCaseSensitive = isCaseSensitive => ({
   type: 'SET_CASE_SENSITIVE',
   payload: { isCaseSensitive },
@@ -344,6 +348,14 @@ export const setWholeWord = isWholeWord => ({
 export const setWildcard = isWildcard => ({
   type: 'SET_WILD_CARD',
   payload: { isWildcard },
+});
+export const setIsSearching = isSearching => ({
+  type: 'SET_IS_SEARCHING',
+  payload: { isSearching },
+});
+export const setNoResult = noResult => ({
+  type: 'SET_NO_RESULT',
+  payload: { noResult },
 });
 export const setSearchError = errorMessage => ({
   type: 'SET_SEARCH_ERROR',
