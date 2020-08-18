@@ -55,6 +55,8 @@ WebViewer(...)
 import { addSortStrategy } from 'constants/sortStrategies';
 import actions from 'actions';
 
+console.log('oops');
+
 export default store => newStrategy => {
   if (newStrategy.name) {
     addSortStrategy(newStrategy);
