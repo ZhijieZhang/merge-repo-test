@@ -1,6 +1,8 @@
 import { calcPopupLeft, calcPopupTop } from 'helpers/getPopupPosition';
 import core from 'core';
 
+console.log('something');
+
 export default (annotation, popup) => {
   const editorContainer = document.querySelector(
     `#pageWidgetContainer${annotation.PageNumber} [id="freetext-editor-${annotation.Id}"]`
