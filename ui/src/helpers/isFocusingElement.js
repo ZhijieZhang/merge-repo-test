@@ -5,7 +5,7 @@ export default () => {
   const isEditingFreetext = freetextAnnots.some(annot => annot.getEditor()?.hasFocus());
 
   const { activeElement } = document;
-
+  console.log('heelo');
   return (
     activeElement instanceof window.HTMLInputElement ||
     activeElement instanceof window.HTMLTextAreaElement ||
